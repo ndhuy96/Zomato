@@ -28,12 +28,17 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDU-fs-KCc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Rz-43-riV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FIB-cd-1vp"/>
                             <constraint firstItem="5Rz-43-riV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I6Q-F7-k1r"/>
@@ -76,7 +81,14 @@
                             <constraint firstItem="eh1-3T-pTu" firstAttribute="centerY" secondItem="tBb-TQ-nQo" secondAttribute="centerY" id="NB4-eL-gbg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tBb-TQ-nQo"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="homeView" destination="gPF-ve-tj2" id="fUs-v0-7uW"/>
+                        <outlet property="scrollView" destination="oXL-Og-rBg" id="lAb-Jm-Do7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUV-h5-lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

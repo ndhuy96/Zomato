@@ -14,16 +14,12 @@ extension UIStoryboard {
 
 extension UIStoryboard {
     var loginViewController: LoginViewController {
-        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
-            fatalError("LoginViewController couldn't be found in Storyboard file")
-        }
+        let vc = LoginViewController.instantiate()
         return vc
     }
     
     var mainViewController: MainViewController {
-        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else {
-            fatalError("MainViewController couldn't be found in Storyboard file")
-        }
+        let vc = MainViewController.instantiate()
         return vc
     }
 }
