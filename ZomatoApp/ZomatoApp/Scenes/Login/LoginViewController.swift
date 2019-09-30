@@ -14,7 +14,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func handleLoginButtonTapped(_ sender: Any) {
-        UserDefaults.standard.set(true, forKey: "LOGGED_IN")
+//        UserDefaults.standard.set(true, forKey: "LOGGED_IN")
         App.shared.swipeLoginToTab()
     }
+}
+
+extension LoginViewController: StoryboardSceneBased {
+    static var sceneStoryboard = UIStoryboard.main
 }

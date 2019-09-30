@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ZomatoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rz-43-riV">
-                                <rect key="frame" x="64" y="346" width="286" height="64"/>
+                                <rect key="frame" x="64" y="421" width="286" height="64"/>
                                 <color key="backgroundColor" red="0.38059576299999998" green="0.640325441" blue="0.90969508889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Ul0-dC-4Rp"/>
@@ -28,12 +28,17 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDU-fs-KCc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Rz-43-riV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FIB-cd-1vp"/>
                             <constraint firstItem="5Rz-43-riV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I6Q-F7-k1r"/>
@@ -51,32 +56,43 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="iku-o2-oNe" customClass="MainViewController" customModule="ZomatoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKl-Mk-gvi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eh1-3T-pTu">
-                                <rect key="frame" x="64" y="346" width="286" height="64"/>
-                                <color key="backgroundColor" red="0.85882352941176465" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-Og-rBg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPF-ve-tj2" customClass="HomeView" customModule="ZomatoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="NhR-Xs-2AI"/>
+                                    <constraint firstItem="gPF-ve-tj2" firstAttribute="leading" secondItem="oXL-Og-rBg" secondAttribute="leading" id="Uao-rv-0Du"/>
+                                    <constraint firstAttribute="trailing" secondItem="gPF-ve-tj2" secondAttribute="trailing" id="WaM-CJ-ZAF"/>
+                                    <constraint firstAttribute="bottom" secondItem="gPF-ve-tj2" secondAttribute="bottom" id="XkM-yS-yMq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="LOGOUT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleLogoutButtonTapped:" destination="iku-o2-oNe" eventType="touchUpInside" id="rIA-SB-QJX"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eh1-3T-pTu" firstAttribute="centerX" secondItem="tBb-TQ-nQo" secondAttribute="centerX" id="CC8-mk-hL2"/>
-                            <constraint firstItem="eh1-3T-pTu" firstAttribute="leading" secondItem="tBb-TQ-nQo" secondAttribute="leading" constant="64" id="HPe-hk-pdb"/>
-                            <constraint firstItem="eh1-3T-pTu" firstAttribute="centerY" secondItem="tBb-TQ-nQo" secondAttribute="centerY" id="NB4-eL-gbg"/>
+                            <constraint firstItem="oXL-Og-rBg" firstAttribute="top" secondItem="IKl-Mk-gvi" secondAttribute="top" id="23g-zL-fGi"/>
+                            <constraint firstItem="oXL-Og-rBg" firstAttribute="top" secondItem="gPF-ve-tj2" secondAttribute="top" id="3Bv-6X-IAY"/>
+                            <constraint firstItem="oXL-Og-rBg" firstAttribute="leading" secondItem="tBb-TQ-nQo" secondAttribute="leading" id="7bT-ey-6el"/>
+                            <constraint firstItem="tBb-TQ-nQo" firstAttribute="bottom" secondItem="oXL-Og-rBg" secondAttribute="bottom" id="IP5-p6-6bZ"/>
+                            <constraint firstItem="gPF-ve-tj2" firstAttribute="height" secondItem="IKl-Mk-gvi" secondAttribute="height" priority="250" id="bRq-yQ-gbW"/>
+                            <constraint firstItem="gPF-ve-tj2" firstAttribute="width" secondItem="IKl-Mk-gvi" secondAttribute="width" id="c1M-mS-Xhh"/>
+                            <constraint firstItem="oXL-Og-rBg" firstAttribute="trailing" secondItem="tBb-TQ-nQo" secondAttribute="trailing" id="faX-80-Z0N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tBb-TQ-nQo"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="homeView" destination="gPF-ve-tj2" id="fUs-v0-7uW"/>
+                        <outlet property="scrollView" destination="oXL-Og-rBg" id="lAb-Jm-Do7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUV-h5-lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

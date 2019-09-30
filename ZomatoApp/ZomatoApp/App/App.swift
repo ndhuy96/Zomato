@@ -18,14 +18,17 @@ final class App {
     func startInterface() {
         // MARK: Initial TabbarController
         tabBarController = UITabBarController()
-        tabBarController.tabBar.barTintColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
-        tabBarController.tabBar.tintColor = .white
+        tabBarController.tabBar.barTintColor = .white
+        tabBarController.tabBar.tintColor = UIColor.primaryColor
         
         // MARK: Initial MainNavigationController and MainViewController
         let mainNavigationController = UINavigationController()
+        let mainNavigator = MainNavigator(navigationController: mainNavigationController)
+        let mainViewModel = MainViewModel(dependencies: MainViewModel.Dependencies(api: CommonRepositoryImpl(), navigator: mainNavigator))
         let mainViewController = UIStoryboard.main.mainViewController
+        mainViewController.viewModel = mainViewModel
         
-        mainNavigationController.tabBarItem = UITabBarItem(title: "Main", image: nil, selectedImage: nil)
+        mainNavigationController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "ic-home"), selectedImage: nil)
         mainNavigationController.viewControllers = [mainViewController]
         
         tabBarController.viewControllers = [

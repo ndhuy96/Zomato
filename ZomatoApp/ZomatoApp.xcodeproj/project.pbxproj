@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,44 @@
 		8E4C7CD02319081A0015717B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C7CCF2319081A0015717B /* App.swift */; };
 		8E4C7CD6231909840015717B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C7CD5231909840015717B /* LoginViewController.swift */; };
 		8E4C7CD923190A930015717B /* UIStoryboard+ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C7CD823190A930015717B /* UIStoryboard+ViewControllers.swift */; };
+		8EB00697231F551E009D7365 /* CollectionCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB00696231F551E009D7365 /* CollectionCategories.swift */; };
+		8EB00699231F556F009D7365 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB00698231F556F009D7365 /* Categories.swift */; };
+		8EB0069B231F5705009D7365 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0069A231F5705009D7365 /* Category.swift */; };
+		8EB006A0231F5779009D7365 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0069F231F5779009D7365 /* BaseError.swift */; };
+		8EB006A3231F57A9009D7365 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006A2231F57A9009D7365 /* BaseResult.swift */; };
+		8EB006A5231F57C5009D7365 /* CustomRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006A4231F57C5009D7365 /* CustomRequestAdapter.swift */; };
+		8EB006A9231F5820009D7365 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006A8231F5820009D7365 /* BaseRequest.swift */; };
+		8EB006AB231F584F009D7365 /* FetchCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */; };
+		8EB006AD231F58D1009D7365 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AC231F58D1009D7365 /* APIUrls.swift */; };
+		8EB006AF231F58EC009D7365 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AE231F58EC009D7365 /* APIKey.swift */; };
+		8EB006B1231F58FA009D7365 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B0231F58FA009D7365 /* APIService.swift */; };
+		8EB006B3231F59C7009D7365 /* CommonRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B2231F59C7009D7365 /* CommonRepositories.swift */; };
+		8EB006B5231F5B9A009D7365 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B4231F5B9A009D7365 /* MainNavigator.swift */; };
+		8EB006B7231F5D05009D7365 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B6231F5D05009D7365 /* MainViewModel.swift */; };
+		8EB006B9231F5D30009D7365 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B8231F5D30009D7365 /* ViewModelType.swift */; };
+		8EB006BB231F5D51009D7365 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006BA231F5D51009D7365 /* ActivityIndicator.swift */; };
+		8EB006BD231F5DA5009D7365 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006BC231F5DA5009D7365 /* UIViewController+Rx.swift */; };
+		8EB006C1231F6E4B009D7365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006C0231F6E4B009D7365 /* HomeView.swift */; };
+		8EB006C3231F6E5C009D7365 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB006C2231F6E5C009D7365 /* HomeView.xib */; };
+		8EB006C6231F706E009D7365 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006C4231F706E009D7365 /* CategoryViewCell.swift */; };
+		8EB006C7231F706E009D7365 /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB006C5231F706E009D7365 /* CategoryViewCell.xib */; };
+		8EB006C92320A68D009D7365 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006C82320A68D009D7365 /* CustomCollectionViewFlowLayout.swift */; };
+		8EB006CB2320C1AF009D7365 /* CollectionRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006CA2320C1AF009D7365 /* CollectionRestaurants.swift */; };
+		8EB006CD2320C1ED009D7365 /* CollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006CC2320C1ED009D7365 /* CollectionElement.swift */; };
+		8EB006CF2320C21A009D7365 /* CollectionsRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006CE2320C21A009D7365 /* CollectionsRestaurants.swift */; };
+		8EB006D12320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D02320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift */; };
+		8EB006D42320EE33009D7365 /* CollectionRestaurantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D22320EE33009D7365 /* CollectionRestaurantsCell.swift */; };
+		8EB006D52320EE33009D7365 /* CollectionRestaurantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB006D32320EE33009D7365 /* CollectionRestaurantsCell.xib */; };
+		8EB006D8232200AF009D7365 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D7232200AF009D7365 /* DesignableUITextField.swift */; };
+		8EB006DA23220301009D7365 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D923220301009D7365 /* UIViewController+.swift */; };
+		8EB006DC2322093A009D7365 /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006DB2322093A009D7365 /* UIDevice+.swift */; };
+		8EEDF0BB231E60C5008EA65D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF0BA231E60C5008EA65D /* UIView+.swift */; };
+		8EEDF0BD231E7046008EA65D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF0BC231E7046008EA65D /* UIColor+.swift */; };
+		F912A3D199F113F8941B5F46 /* Pods_ZomatoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.release.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.release.xcconfig"; sourceTree = "<group>"; };
 		8E4C7CB9231906160015717B /* ZomatoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4C7CBC231906160015717B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4C7CBE231906160015717B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +64,41 @@
 		8E4C7CD12319083C0015717B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		8E4C7CD5231909840015717B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E4C7CD823190A930015717B /* UIStoryboard+ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewControllers.swift"; sourceTree = "<group>"; };
+		8EB00696231F551E009D7365 /* CollectionCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCategories.swift; sourceTree = "<group>"; };
+		8EB00698231F556F009D7365 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		8EB0069A231F5705009D7365 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8EB0069F231F5779009D7365 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		8EB006A2231F57A9009D7365 /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		8EB006A4231F57C5009D7365 /* CustomRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequestAdapter.swift; sourceTree = "<group>"; };
+		8EB006A8231F5820009D7365 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCategoriesRequest.swift; sourceTree = "<group>"; };
+		8EB006AC231F58D1009D7365 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		8EB006AE231F58EC009D7365 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		8EB006B0231F58FA009D7365 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8EB006B2231F59C7009D7365 /* CommonRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRepositories.swift; sourceTree = "<group>"; };
+		8EB006B4231F5B9A009D7365 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		8EB006B6231F5D05009D7365 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8EB006B8231F5D30009D7365 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		8EB006BA231F5D51009D7365 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		8EB006BC231F5DA5009D7365 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		8EB006C0231F6E4B009D7365 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8EB006C2231F6E5C009D7365 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		8EB006C4231F706E009D7365 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		8EB006C5231F706E009D7365 /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
+		8EB006C82320A68D009D7365 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		8EB006CA2320C1AF009D7365 /* CollectionRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRestaurants.swift; sourceTree = "<group>"; };
+		8EB006CC2320C1ED009D7365 /* CollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionElement.swift; sourceTree = "<group>"; };
+		8EB006CE2320C21A009D7365 /* CollectionsRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsRestaurants.swift; sourceTree = "<group>"; };
+		8EB006D02320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCollectionsRestaurantsRequest.swift; sourceTree = "<group>"; };
+		8EB006D22320EE33009D7365 /* CollectionRestaurantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRestaurantsCell.swift; sourceTree = "<group>"; };
+		8EB006D32320EE33009D7365 /* CollectionRestaurantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionRestaurantsCell.xib; sourceTree = "<group>"; };
+		8EB006D7232200AF009D7365 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		8EB006D923220301009D7365 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		8EB006DB2322093A009D7365 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
+		8EEDF0BA231E60C5008EA65D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		8EEDF0BC231E7046008EA65D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.debug.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZomatoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,18 +106,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F912A3D199F113F8941B5F46 /* Pods_ZomatoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565ED4257C87BAE2E564C017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E4C7CB0231906160015717B = {
 			isa = PBXGroup;
 			children = (
 				8E4C7CD12319083C0015717B /* Bridging-Header.h */,
 				8E4C7CBB231906160015717B /* ZomatoApp */,
 				8E4C7CBA231906160015717B /* Products */,
+				A5A6A2394012F89BC02B333D /* Pods */,
+				565ED4257C87BAE2E564C017 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				8E4C7CCE2319080D0015717B /* App */,
+				8EEDF0B9231E60B2008EA65D /* Extensions */,
 				8E4C7CD723190A7A0015717B /* Utils */,
+				8EB00693231F543B009D7365 /* Repository */,
+				8EB00692231F5413009D7365 /* Data */,
 				8E4C7CD22319095E0015717B /* Scenes */,
 				8E4C7CC3231906170015717B /* Assets.xcassets */,
 				8E4C7CC5231906170015717B /* LaunchScreen.storyboard */,
@@ -95,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				8E4C7CBE231906160015717B /* MainViewController.swift */,
+				8EB006B4231F5B9A009D7365 /* MainNavigator.swift */,
+				8EB006B6231F5D05009D7365 /* MainViewModel.swift */,
+				8EEDF0BE231F4C3E008EA65D /* Views */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -111,6 +198,10 @@
 			isa = PBXGroup;
 			children = (
 				8E4C7CD823190A930015717B /* UIStoryboard+ViewControllers.swift */,
+				8EB006B8231F5D30009D7365 /* ViewModelType.swift */,
+				8EB006BA231F5D51009D7365 /* ActivityIndicator.swift */,
+				8EB006BC231F5DA5009D7365 /* UIViewController+Rx.swift */,
+				8EB006C82320A68D009D7365 /* CustomCollectionViewFlowLayout.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -123,6 +214,143 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		8EB00692231F5413009D7365 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8EB00694231F54A9009D7365 /* Source */,
+				8EB00695231F54AF009D7365 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8EB00693231F543B009D7365 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8EB006B2231F59C7009D7365 /* CommonRepositories.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8EB00694231F54A9009D7365 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8EB0069C231F574B009D7365 /* Remote */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8EB00695231F54AF009D7365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EB00698231F556F009D7365 /* Categories.swift */,
+				8EB0069A231F5705009D7365 /* Category.swift */,
+				8EB006CA2320C1AF009D7365 /* CollectionRestaurants.swift */,
+				8EB006CC2320C1ED009D7365 /* CollectionElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EB0069C231F574B009D7365 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8EB0069D231F575B009D7365 /* API */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		8EB0069D231F575B009D7365 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EB0069E231F5761009D7365 /* Error */,
+				8EB006A1231F578D009D7365 /* Middleware */,
+				8EB006A6231F57EC009D7365 /* Response */,
+				8EB006A7231F5808009D7365 /* Request */,
+				8EB006AC231F58D1009D7365 /* APIUrls.swift */,
+				8EB006AE231F58EC009D7365 /* APIKey.swift */,
+				8EB006B0231F58FA009D7365 /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8EB0069E231F5761009D7365 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8EB0069F231F5779009D7365 /* BaseError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		8EB006A1231F578D009D7365 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				8EB006A2231F57A9009D7365 /* BaseResult.swift */,
+				8EB006A4231F57C5009D7365 /* CustomRequestAdapter.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		8EB006A6231F57EC009D7365 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8EB00696231F551E009D7365 /* CollectionCategories.swift */,
+				8EB006CE2320C21A009D7365 /* CollectionsRestaurants.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8EB006A7231F5808009D7365 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8EB006A8231F5820009D7365 /* BaseRequest.swift */,
+				8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */,
+				8EB006D02320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8EB006D62321214C009D7365 /* UI+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8EEDF0BA231E60C5008EA65D /* UIView+.swift */,
+				8EEDF0BC231E7046008EA65D /* UIColor+.swift */,
+				8EB006D7232200AF009D7365 /* DesignableUITextField.swift */,
+				8EB006D923220301009D7365 /* UIViewController+.swift */,
+				8EB006DB2322093A009D7365 /* UIDevice+.swift */,
+			);
+			path = "UI+Extensions";
+			sourceTree = "<group>";
+		};
+		8EEDF0B9231E60B2008EA65D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8EB006D62321214C009D7365 /* UI+Extensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8EEDF0BE231F4C3E008EA65D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EB006C0231F6E4B009D7365 /* HomeView.swift */,
+				8EB006C2231F6E5C009D7365 /* HomeView.xib */,
+				8EB006C4231F706E009D7365 /* CategoryViewCell.swift */,
+				8EB006C5231F706E009D7365 /* CategoryViewCell.xib */,
+				8EB006D22320EE33009D7365 /* CollectionRestaurantsCell.swift */,
+				8EB006D32320EE33009D7365 /* CollectionRestaurantsCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5A6A2394012F89BC02B333D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */,
+				60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E4C7CCB231906170015717B /* Build configuration list for PBXNativeTarget "ZomatoApp" */;
 			buildPhases = (
+				0F795FF8394BC4D342A504A4 /* [CP] Check Pods Manifest.lock */,
 				8E4C7CB5231906160015717B /* Sources */,
 				8E4C7CB6231906160015717B /* Frameworks */,
 				8E4C7CB7231906160015717B /* Resources */,
+				376E8FEA549604C84C6A2B02 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,7 +411,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB006D52320EE33009D7365 /* CollectionRestaurantsCell.xib in Resources */,
 				8E4C7CC7231906170015717B /* LaunchScreen.storyboard in Resources */,
+				8EB006C7231F706E009D7365 /* CategoryViewCell.xib in Resources */,
+				8EB006C3231F6E5C009D7365 /* HomeView.xib in Resources */,
 				8E4C7CC4231906170015717B /* Assets.xcassets in Resources */,
 				8E4C7CC2231906160015717B /* Main.storyboard in Resources */,
 			);
@@ -189,16 +422,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F795FF8394BC4D342A504A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZomatoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376E8FEA549604C84C6A2B02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E4C7CB5231906160015717B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB006B9231F5D30009D7365 /* ViewModelType.swift in Sources */,
+				8EEDF0BB231E60C5008EA65D /* UIView+.swift in Sources */,
+				8EB006D42320EE33009D7365 /* CollectionRestaurantsCell.swift in Sources */,
+				8EB006B3231F59C7009D7365 /* CommonRepositories.swift in Sources */,
+				8EB006C1231F6E4B009D7365 /* HomeView.swift in Sources */,
+				8EB006C92320A68D009D7365 /* CustomCollectionViewFlowLayout.swift in Sources */,
+				8EB006DA23220301009D7365 /* UIViewController+.swift in Sources */,
+				8EB006B5231F5B9A009D7365 /* MainNavigator.swift in Sources */,
+				8EB0069B231F5705009D7365 /* Category.swift in Sources */,
+				8EB006C6231F706E009D7365 /* CategoryViewCell.swift in Sources */,
+				8EB00697231F551E009D7365 /* CollectionCategories.swift in Sources */,
 				8E4C7CD6231909840015717B /* LoginViewController.swift in Sources */,
+				8EB006AB231F584F009D7365 /* FetchCategoriesRequest.swift in Sources */,
 				8E4C7CD923190A930015717B /* UIStoryboard+ViewControllers.swift in Sources */,
+				8EB006A3231F57A9009D7365 /* BaseResult.swift in Sources */,
 				8E4C7CD02319081A0015717B /* App.swift in Sources */,
+				8EB006AD231F58D1009D7365 /* APIUrls.swift in Sources */,
+				8EB006BB231F5D51009D7365 /* ActivityIndicator.swift in Sources */,
+				8EB00699231F556F009D7365 /* Categories.swift in Sources */,
+				8EB006D8232200AF009D7365 /* DesignableUITextField.swift in Sources */,
 				8E4C7CBF231906160015717B /* MainViewController.swift in Sources */,
+				8EB006D12320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift in Sources */,
+				8EB006A0231F5779009D7365 /* BaseError.swift in Sources */,
+				8EB006B7231F5D05009D7365 /* MainViewModel.swift in Sources */,
+				8EB006A9231F5820009D7365 /* BaseRequest.swift in Sources */,
 				8E4C7CBD231906160015717B /* AppDelegate.swift in Sources */,
+				8EB006DC2322093A009D7365 /* UIDevice+.swift in Sources */,
+				8EB006A5231F57C5009D7365 /* CustomRequestAdapter.swift in Sources */,
+				8EEDF0BD231E7046008EA65D /* UIColor+.swift in Sources */,
+				8EB006B1231F58FA009D7365 /* APIService.swift in Sources */,
+				8EB006BD231F5DA5009D7365 /* UIViewController+Rx.swift in Sources */,
+				8EB006CB2320C1AF009D7365 /* CollectionRestaurants.swift in Sources */,
+				8EB006AF231F58EC009D7365 /* APIKey.swift in Sources */,
+				8EB006CF2320C21A009D7365 /* CollectionsRestaurants.swift in Sources */,
+				8EB006CD2320C1ED009D7365 /* CollectionElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +649,7 @@
 		};
 		8E4C7CCC231906170015717B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -363,6 +669,7 @@
 		};
 		8E4C7CCD231906170015717B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
