@@ -10,6 +10,9 @@ target 'ZomatoApp' do
   pod 'Nuke'
   pod 'Reusable'
   pod "SkeletonView"
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+
   # Pods for ZomatoApp
 
 end

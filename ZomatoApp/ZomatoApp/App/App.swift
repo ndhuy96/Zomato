@@ -17,12 +17,12 @@ final class App {
     
     func startInterface() {
         // MARK: Initial TabbarController
-        tabBarController = UITabBarController()
+        tabBarController = CustomTabBarController()
         tabBarController.tabBar.barTintColor = .white
         tabBarController.tabBar.tintColor = UIColor.primaryColor
         
         // MARK: Initial MainNavigationController and MainViewController
-        let mainNavigationController = UINavigationController()
+        let mainNavigationController = CustomNavigationController()
         let mainNavigator = MainNavigator(navigationController: mainNavigationController)
         let mainViewModel = MainViewModel(dependencies: MainViewModel.Dependencies(api: CommonRepositoryImpl(), navigator: mainNavigator))
         let mainViewController = UIStoryboard.main.mainViewController
@@ -48,14 +48,32 @@ final class App {
     }
     
     func swipeBackToLogin() {
-        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            self.window.rootViewController = self.loginViewController
-        }, completion: nil)
+        let snapShot = window.snapshotView(afterScreenUpdates: true)
+        if let snapShot = snapShot {
+            loginViewController.view.addSubview(snapShot)
+        }
+        window.rootViewController = loginViewController
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            snapShot?.layer.opacity = 0
+            snapShot?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }) { finished in
+            snapShot?.removeFromSuperview()
+        }
     }
     
     func swipeLoginToTab() {
-        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            self.window.rootViewController = self.tabBarController
-        }, completion: nil)
+        let snapShot = window.snapshotView(afterScreenUpdates: true)
+        if let snapShot = snapShot {
+            tabBarController.view.addSubview(snapShot)
+        }
+        window.rootViewController = tabBarController
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            snapShot?.layer.opacity = 0
+            snapShot?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }) { finished in
+            snapShot?.removeFromSuperview()
+        }
     }
 }

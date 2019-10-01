@@ -13,10 +13,6 @@ final class CollectionRestaurantsCell: UICollectionViewCell, NibReusable {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func configCollectionRestaurants(_ collection: CollectionRestaurants) {
         titleLabel.text = collection.title
         subtitleLabel.text = collection.collectionDescription

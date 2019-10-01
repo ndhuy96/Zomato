@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E46CC652343005F005CAAA1 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CC642343005F005CAAA1 /* APIKey.swift */; };
+		8E46CC67234364EE005CAAA1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CC66234364EE005CAAA1 /* MapViewModel.swift */; };
 		8E4C7CBD231906160015717B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C7CBC231906160015717B /* AppDelegate.swift */; };
 		8E4C7CBF231906160015717B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C7CBE231906160015717B /* MainViewController.swift */; };
 		8E4C7CC2231906160015717B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4C7CC0231906160015717B /* Main.storyboard */; };
@@ -24,7 +26,6 @@
 		8EB006A9231F5820009D7365 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006A8231F5820009D7365 /* BaseRequest.swift */; };
 		8EB006AB231F584F009D7365 /* FetchCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */; };
 		8EB006AD231F58D1009D7365 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AC231F58D1009D7365 /* APIUrls.swift */; };
-		8EB006AF231F58EC009D7365 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006AE231F58EC009D7365 /* APIKey.swift */; };
 		8EB006B1231F58FA009D7365 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B0231F58FA009D7365 /* APIService.swift */; };
 		8EB006B3231F59C7009D7365 /* CommonRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B2231F59C7009D7365 /* CommonRepositories.swift */; };
 		8EB006B5231F5B9A009D7365 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006B4231F5B9A009D7365 /* MainNavigator.swift */; };
@@ -46,13 +47,36 @@
 		8EB006D8232200AF009D7365 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D7232200AF009D7365 /* DesignableUITextField.swift */; };
 		8EB006DA23220301009D7365 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006D923220301009D7365 /* UIViewController+.swift */; };
 		8EB006DC2322093A009D7365 /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB006DB2322093A009D7365 /* UIDevice+.swift */; };
+		8EB1395223445261006D7513 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB1395123445261006D7513 /* Map.storyboard */; };
+		8EB1395423458A7E006D7513 /* FetchNearbyRestaurantsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395323458A7E006D7513 /* FetchNearbyRestaurantsRequest.swift */; };
+		8EB1395623459105006D7513 /* NearbyRestaurantsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395523459105006D7513 /* NearbyRestaurantsResponse.swift */; };
+		8EB13958234591B1006D7513 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB13957234591B1006D7513 /* Location.swift */; };
+		8EB1395A23459209006D7513 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395923459209006D7513 /* BackgroundColor.swift */; };
+		8EB1395C23459278006D7513 /* HasMenuStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395B23459278006D7513 /* HasMenuStatus.swift */; };
+		8EB1395E234592B3006D7513 /* NearbyRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395D234592B3006D7513 /* NearbyRestaurants.swift */; };
+		8EB13960234592E6006D7513 /* Popularity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1395F234592E6006D7513 /* Popularity.swift */; };
+		8EB139622345933F006D7513 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB139612345933F006D7513 /* Result.swift */; };
+		8EB139642345938D006D7513 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB139632345938D006D7513 /* Rating.swift */; };
+		8EB13966234593D8006D7513 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB13965234593D8006D7513 /* Restaurant.swift */; };
+		8EB1396823459542006D7513 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1396723459542006D7513 /* Title.swift */; };
+		8EB1396A23459566006D7513 /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1396923459566006D7513 /* UserRating.swift */; };
+		8EB4E54523B332A40077EE79 /* TransitionAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E54423B332A40077EE79 /* TransitionAnimationController.swift */; };
+		8EC0C843238F7FAF00534A0B /* UITabBarController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C842238F7FAF00534A0B /* UITabBarController+.swift */; };
+		8EC0C845238FA57300534A0B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C844238FA57300534A0B /* CustomNavigationController.swift */; };
+		8EEC70682342112500D5BE73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC70662342112500D5BE73 /* MapViewController.swift */; };
+		8EEC706D234213F700D5BE73 /* GoogleMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC706C234213F700D5BE73 /* GoogleMapService.swift */; };
+		8EEC706F23421D1500D5BE73 /* MapViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */; };
 		8EEDF0BB231E60C5008EA65D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF0BA231E60C5008EA65D /* UIView+.swift */; };
 		8EEDF0BD231E7046008EA65D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEDF0BC231E7046008EA65D /* UIColor+.swift */; };
-		F912A3D199F113F8941B5F46 /* Pods_ZomatoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */; };
+		8EFDA7FB234725F50065A9D5 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFDA7FA234725F50065A9D5 /* ErrorTracker.swift */; };
+		ED3D3A18B515AA098BEFDFCC /* Pods_ZomatoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C778A34D0F2B655738AD1B /* Pods_ZomatoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.release.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.release.xcconfig"; sourceTree = "<group>"; };
+		1A29E52BFB803CDD35C0DF57 /* Pods-ZomatoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.debug.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		61C778A34D0F2B655738AD1B /* Pods_ZomatoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZomatoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E46CC642343005F005CAAA1 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		8E46CC66234364EE005CAAA1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		8E4C7CB9231906160015717B /* ZomatoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZomatoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4C7CBC231906160015717B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4C7CBE231906160015717B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +97,6 @@
 		8EB006A8231F5820009D7365 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCategoriesRequest.swift; sourceTree = "<group>"; };
 		8EB006AC231F58D1009D7365 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
-		8EB006AE231F58EC009D7365 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		8EB006B0231F58FA009D7365 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8EB006B2231F59C7009D7365 /* CommonRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRepositories.swift; sourceTree = "<group>"; };
 		8EB006B4231F5B9A009D7365 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
@@ -95,10 +118,29 @@
 		8EB006D7232200AF009D7365 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		8EB006D923220301009D7365 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		8EB006DB2322093A009D7365 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
+		8EB1395123445261006D7513 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		8EB1395323458A7E006D7513 /* FetchNearbyRestaurantsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNearbyRestaurantsRequest.swift; sourceTree = "<group>"; };
+		8EB1395523459105006D7513 /* NearbyRestaurantsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantsResponse.swift; sourceTree = "<group>"; };
+		8EB13957234591B1006D7513 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8EB1395923459209006D7513 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		8EB1395B23459278006D7513 /* HasMenuStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasMenuStatus.swift; sourceTree = "<group>"; };
+		8EB1395D234592B3006D7513 /* NearbyRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurants.swift; sourceTree = "<group>"; };
+		8EB1395F234592E6006D7513 /* Popularity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popularity.swift; sourceTree = "<group>"; };
+		8EB139612345933F006D7513 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8EB139632345938D006D7513 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		8EB13965234593D8006D7513 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		8EB1396723459542006D7513 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		8EB1396923459566006D7513 /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
+		8EB4E54423B332A40077EE79 /* TransitionAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimationController.swift; sourceTree = "<group>"; };
+		8EC0C842238F7FAF00534A0B /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
+		8EC0C844238FA57300534A0B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		8EEC70662342112500D5BE73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8EEC706C234213F700D5BE73 /* GoogleMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapService.swift; sourceTree = "<group>"; };
+		8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewNavigator.swift; sourceTree = "<group>"; };
 		8EEDF0BA231E60C5008EA65D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		8EEDF0BC231E7046008EA65D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
-		99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.debug.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZomatoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFDA7FA234725F50065A9D5 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		CDDFD96518A5496AC984C540 /* Pods-ZomatoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZomatoApp.release.xcconfig"; path = "Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,19 +148,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F912A3D199F113F8941B5F46 /* Pods_ZomatoApp.framework in Frameworks */,
+				ED3D3A18B515AA098BEFDFCC /* Pods_ZomatoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		565ED4257C87BAE2E564C017 /* Frameworks */ = {
+		3B0C71C35EB95B551D4DA127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A11107DD2F6085B77A48D94C /* Pods_ZomatoApp.framework */,
+				61C778A34D0F2B655738AD1B /* Pods_ZomatoApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E46CC6823436508005CAAA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8E4C7CB0231906160015717B = {
@@ -128,7 +177,7 @@
 				8E4C7CBB231906160015717B /* ZomatoApp */,
 				8E4C7CBA231906160015717B /* Products */,
 				A5A6A2394012F89BC02B333D /* Pods */,
-				565ED4257C87BAE2E564C017 /* Frameworks */,
+				3B0C71C35EB95B551D4DA127 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4C7CCE2319080D0015717B /* App */,
+				8ED256362373C2CE0060B3CD /* TransitionAnimation */,
 				8EEDF0B9231E60B2008EA65D /* Extensions */,
 				8E4C7CD723190A7A0015717B /* Utils */,
 				8EB00693231F543B009D7365 /* Repository */,
@@ -159,6 +209,7 @@
 		8E4C7CCE2319080D0015717B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8EEC706B234213D200D5BE73 /* AppServices */,
 				8E4C7CBC231906160015717B /* AppDelegate.swift */,
 				8E4C7CCF2319081A0015717B /* App.swift */,
 			);
@@ -171,6 +222,7 @@
 				8E4C7CDA23191A980015717B /* Storyboards */,
 				8E4C7CD4231909790015717B /* Login */,
 				8E4C7CD3231909670015717B /* Main */,
+				8EEC706A2342112900D5BE73 /* Map */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -202,6 +254,7 @@
 				8EB006BA231F5D51009D7365 /* ActivityIndicator.swift */,
 				8EB006BC231F5DA5009D7365 /* UIViewController+Rx.swift */,
 				8EB006C82320A68D009D7365 /* CustomCollectionViewFlowLayout.swift */,
+				8EFDA7FA234725F50065A9D5 /* ErrorTracker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -210,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4C7CC0231906160015717B /* Main.storyboard */,
+				8EB1395123445261006D7513 /* Map.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -246,6 +300,16 @@
 				8EB0069A231F5705009D7365 /* Category.swift */,
 				8EB006CA2320C1AF009D7365 /* CollectionRestaurants.swift */,
 				8EB006CC2320C1ED009D7365 /* CollectionElement.swift */,
+				8EB13957234591B1006D7513 /* Location.swift */,
+				8EB1395923459209006D7513 /* BackgroundColor.swift */,
+				8EB1395B23459278006D7513 /* HasMenuStatus.swift */,
+				8EB1395D234592B3006D7513 /* NearbyRestaurants.swift */,
+				8EB1395F234592E6006D7513 /* Popularity.swift */,
+				8EB139612345933F006D7513 /* Result.swift */,
+				8EB139632345938D006D7513 /* Rating.swift */,
+				8EB13965234593D8006D7513 /* Restaurant.swift */,
+				8EB1396723459542006D7513 /* Title.swift */,
+				8EB1396923459566006D7513 /* UserRating.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,8 +330,8 @@
 				8EB006A6231F57EC009D7365 /* Response */,
 				8EB006A7231F5808009D7365 /* Request */,
 				8EB006AC231F58D1009D7365 /* APIUrls.swift */,
-				8EB006AE231F58EC009D7365 /* APIKey.swift */,
 				8EB006B0231F58FA009D7365 /* APIService.swift */,
+				8E46CC642343005F005CAAA1 /* APIKey.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -294,6 +358,7 @@
 			children = (
 				8EB00696231F551E009D7365 /* CollectionCategories.swift */,
 				8EB006CE2320C21A009D7365 /* CollectionsRestaurants.swift */,
+				8EB1395523459105006D7513 /* NearbyRestaurantsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -304,6 +369,7 @@
 				8EB006A8231F5820009D7365 /* BaseRequest.swift */,
 				8EB006AA231F584F009D7365 /* FetchCategoriesRequest.swift */,
 				8EB006D02320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift */,
+				8EB1395323458A7E006D7513 /* FetchNearbyRestaurantsRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -316,8 +382,37 @@
 				8EB006D7232200AF009D7365 /* DesignableUITextField.swift */,
 				8EB006D923220301009D7365 /* UIViewController+.swift */,
 				8EB006DB2322093A009D7365 /* UIDevice+.swift */,
+				8EC0C842238F7FAF00534A0B /* UITabBarController+.swift */,
 			);
 			path = "UI+Extensions";
+			sourceTree = "<group>";
+		};
+		8ED256362373C2CE0060B3CD /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8EC0C844238FA57300534A0B /* CustomNavigationController.swift */,
+				8EB4E54423B332A40077EE79 /* TransitionAnimationController.swift */,
+			);
+			path = TransitionAnimation;
+			sourceTree = "<group>";
+		};
+		8EEC706A2342112900D5BE73 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC70662342112500D5BE73 /* MapViewController.swift */,
+				8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */,
+				8E46CC66234364EE005CAAA1 /* MapViewModel.swift */,
+				8E46CC6823436508005CAAA1 /* Views */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		8EEC706B234213D200D5BE73 /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				8EEC706C234213F700D5BE73 /* GoogleMapService.swift */,
+			);
+			path = AppServices;
 			sourceTree = "<group>";
 		};
 		8EEDF0B9231E60B2008EA65D /* Extensions */ = {
@@ -344,8 +439,8 @@
 		A5A6A2394012F89BC02B333D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */,
-				60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */,
+				1A29E52BFB803CDD35C0DF57 /* Pods-ZomatoApp.debug.xcconfig */,
+				CDDFD96518A5496AC984C540 /* Pods-ZomatoApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -357,11 +452,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E4C7CCB231906170015717B /* Build configuration list for PBXNativeTarget "ZomatoApp" */;
 			buildPhases = (
-				0F795FF8394BC4D342A504A4 /* [CP] Check Pods Manifest.lock */,
+				1995C6FAA1720F68D2CF2578 /* [CP] Check Pods Manifest.lock */,
 				8E4C7CB5231906160015717B /* Sources */,
 				8E4C7CB6231906160015717B /* Frameworks */,
 				8E4C7CB7231906160015717B /* Resources */,
-				376E8FEA549604C84C6A2B02 /* [CP] Embed Pods Frameworks */,
+				D77482B644B676F169E2FA83 /* [CP] Embed Pods Frameworks */,
+				8683DE9ADD9DB6AE8DFA40EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -411,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB006D52320EE33009D7365 /* CollectionRestaurantsCell.xib in Resources */,
+				8EB1395223445261006D7513 /* Map.storyboard in Resources */,
 				8E4C7CC7231906170015717B /* LaunchScreen.storyboard in Resources */,
 				8EB006C7231F706E009D7365 /* CategoryViewCell.xib in Resources */,
 				8EB006C3231F6E5C009D7365 /* HomeView.xib in Resources */,
@@ -422,7 +519,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F795FF8394BC4D342A504A4 /* [CP] Check Pods Manifest.lock */ = {
+		1995C6FAA1720F68D2CF2578 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,7 +541,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		376E8FEA549604C84C6A2B02 /* [CP] Embed Pods Frameworks */ = {
+		8683DE9ADD9DB6AE8DFA40EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZomatoApp/Pods-ZomatoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77482B644B676F169E2FA83 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,35 +586,55 @@
 				8EEDF0BB231E60C5008EA65D /* UIView+.swift in Sources */,
 				8EB006D42320EE33009D7365 /* CollectionRestaurantsCell.swift in Sources */,
 				8EB006B3231F59C7009D7365 /* CommonRepositories.swift in Sources */,
+				8EEC706D234213F700D5BE73 /* GoogleMapService.swift in Sources */,
 				8EB006C1231F6E4B009D7365 /* HomeView.swift in Sources */,
+				8EB1396A23459566006D7513 /* UserRating.swift in Sources */,
+				8EB1395423458A7E006D7513 /* FetchNearbyRestaurantsRequest.swift in Sources */,
+				8EB1395C23459278006D7513 /* HasMenuStatus.swift in Sources */,
 				8EB006C92320A68D009D7365 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				8EB006DA23220301009D7365 /* UIViewController+.swift in Sources */,
 				8EB006B5231F5B9A009D7365 /* MainNavigator.swift in Sources */,
 				8EB0069B231F5705009D7365 /* Category.swift in Sources */,
+				8EB139642345938D006D7513 /* Rating.swift in Sources */,
 				8EB006C6231F706E009D7365 /* CategoryViewCell.swift in Sources */,
+				8EB1395A23459209006D7513 /* BackgroundColor.swift in Sources */,
 				8EB00697231F551E009D7365 /* CollectionCategories.swift in Sources */,
 				8E4C7CD6231909840015717B /* LoginViewController.swift in Sources */,
 				8EB006AB231F584F009D7365 /* FetchCategoriesRequest.swift in Sources */,
 				8E4C7CD923190A930015717B /* UIStoryboard+ViewControllers.swift in Sources */,
 				8EB006A3231F57A9009D7365 /* BaseResult.swift in Sources */,
 				8E4C7CD02319081A0015717B /* App.swift in Sources */,
+				8E46CC67234364EE005CAAA1 /* MapViewModel.swift in Sources */,
 				8EB006AD231F58D1009D7365 /* APIUrls.swift in Sources */,
 				8EB006BB231F5D51009D7365 /* ActivityIndicator.swift in Sources */,
 				8EB00699231F556F009D7365 /* Categories.swift in Sources */,
+				8E46CC652343005F005CAAA1 /* APIKey.swift in Sources */,
 				8EB006D8232200AF009D7365 /* DesignableUITextField.swift in Sources */,
 				8E4C7CBF231906160015717B /* MainViewController.swift in Sources */,
 				8EB006D12320C258009D7365 /* FetchCollectionsRestaurantsRequest.swift in Sources */,
 				8EB006A0231F5779009D7365 /* BaseError.swift in Sources */,
+				8EFDA7FB234725F50065A9D5 /* ErrorTracker.swift in Sources */,
 				8EB006B7231F5D05009D7365 /* MainViewModel.swift in Sources */,
+				8EB13960234592E6006D7513 /* Popularity.swift in Sources */,
+				8EC0C845238FA57300534A0B /* CustomNavigationController.swift in Sources */,
 				8EB006A9231F5820009D7365 /* BaseRequest.swift in Sources */,
 				8E4C7CBD231906160015717B /* AppDelegate.swift in Sources */,
 				8EB006DC2322093A009D7365 /* UIDevice+.swift in Sources */,
 				8EB006A5231F57C5009D7365 /* CustomRequestAdapter.swift in Sources */,
 				8EEDF0BD231E7046008EA65D /* UIColor+.swift in Sources */,
 				8EB006B1231F58FA009D7365 /* APIService.swift in Sources */,
+				8EB13966234593D8006D7513 /* Restaurant.swift in Sources */,
+				8EB4E54523B332A40077EE79 /* TransitionAnimationController.swift in Sources */,
+				8EB139622345933F006D7513 /* Result.swift in Sources */,
+				8EB1396823459542006D7513 /* Title.swift in Sources */,
+				8EB1395E234592B3006D7513 /* NearbyRestaurants.swift in Sources */,
+				8EB13958234591B1006D7513 /* Location.swift in Sources */,
 				8EB006BD231F5DA5009D7365 /* UIViewController+Rx.swift in Sources */,
+				8EEC70682342112500D5BE73 /* MapViewController.swift in Sources */,
 				8EB006CB2320C1AF009D7365 /* CollectionRestaurants.swift in Sources */,
-				8EB006AF231F58EC009D7365 /* APIKey.swift in Sources */,
+				8EEC706F23421D1500D5BE73 /* MapViewNavigator.swift in Sources */,
+				8EB1395623459105006D7513 /* NearbyRestaurantsResponse.swift in Sources */,
+				8EC0C843238F7FAF00534A0B /* UITabBarController+.swift in Sources */,
 				8EB006CF2320C21A009D7365 /* CollectionsRestaurants.swift in Sources */,
 				8EB006CD2320C1ED009D7365 /* CollectionElement.swift in Sources */,
 			);
@@ -648,12 +782,13 @@
 		};
 		8E4C7CCC231906170015717B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99AC198AD124611FD486CD5D /* Pods-ZomatoApp.debug.xcconfig */;
+			baseConfigurationReference = 1A29E52BFB803CDD35C0DF57 /* Pods-ZomatoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FVQE295NZ;
 				INFOPLIST_FILE = ZomatoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,12 +803,13 @@
 		};
 		8E4C7CCD231906170015717B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60ED9DA36FDA727A8166ED44 /* Pods-ZomatoApp.release.xcconfig */;
+			baseConfigurationReference = CDDFD96518A5496AC984C540 /* Pods-ZomatoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FVQE295NZ;
 				INFOPLIST_FILE = ZomatoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
