@@ -11,6 +11,7 @@ import RxSwift
 protocol CategoriesRepository {
     func fetchCategories() -> Observable<[Categories]>
     func fetchCollectionsRestaurants(in cityId: Int) -> Observable<CollectionsRestaurants>
+    func fetchNearbyRestaurants(lat: Double, long: Double) -> Observable<NearbyRestaurantsResponse>
 }
 
 protocol ApiRepository: CategoriesRepository { }
@@ -25,7 +26,7 @@ final class CommonRepositoryImpl: ApiRepository {
     func fetchCategories() -> Observable<[Categories]> {
         return Observable.create { observer in
             let input = FetchCategoriesRequest()
-            self.api?.request(input: input) { (object: CollectionCategories?, error) in
+            let req = self.api?.request(input: input) { (object: CollectionCategories?, error) in
                 if let object = object {
                     guard let categories = object.categories else { return }
                     observer.onNext(categories)
@@ -34,14 +35,16 @@ final class CommonRepositoryImpl: ApiRepository {
                     observer.onError(error)
                 }
             }
-            return Disposables.create()
+            return Disposables.create {
+                req?.cancel()
+            }
         }
     }
     
     func fetchCollectionsRestaurants(in cityId: Int) -> Observable<CollectionsRestaurants> {
         return Observable.create { observer in
             let input = FetchCollectionsRestaurantsRequest(cityId: cityId)
-            self.api?.request(input: input) { (object: CollectionsRestaurants?, error) in
+            let req = self.api?.request(input: input) { (object: CollectionsRestaurants?, error) in
                 if let collectionsRestaurants = object {
                     observer.onNext(collectionsRestaurants)
                     observer.onCompleted()
@@ -49,7 +52,26 @@ final class CommonRepositoryImpl: ApiRepository {
                     observer.onError(error)
                 }
             }
-            return Disposables.create()
+            return Disposables.create {
+                req?.cancel()
+            }
+        }
+    }
+    
+    func fetchNearbyRestaurants(lat: Double, long: Double) -> Observable<NearbyRestaurantsResponse> {
+        return Observable.create { observer in
+            let input = FetchNearbyRestaurantsRequest(lat: lat, long: long)
+            let req = self.api?.request(input: input) { (object: NearbyRestaurantsResponse?, error) in
+                if let nearbyRestaurantsResponse = object {
+                    observer.onNext(nearbyRestaurantsResponse)
+                    observer.onCompleted()
+                } else if let error = error {
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create {
+                req?.cancel()
+            }
         }
     }
 }

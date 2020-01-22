@@ -13,12 +13,15 @@ final class MainViewModel: ViewModelType {
     struct Input {
         let ready: Driver<Void>
         let selected: Driver<Int>
+        let locationTrigger: Driver<Void>
     }
     
     struct Output {
         let loading: Driver<Bool>
         let results: Driver<HomeItemViewModel?>
         let selected: Driver<Void>
+        let locationTaps: Driver<Void>
+        let error: Driver<Error>
     }
     
     struct Dependencies {
@@ -35,16 +38,20 @@ final class MainViewModel: ViewModelType {
     func transform(input: MainViewModel.Input) -> MainViewModel.Output {
         let activityIndicator = ActivityIndicator()
         let loading = activityIndicator.asDriver()
-
+        let errorTracker = ErrorTracker()
+        
         let results = input.ready
             .asObservable()
-            .flatMap {
+            .flatMapLatest { _ in
                 Observable.zip(self.dependencies.api.fetchCategories(),
-                               self.dependencies.api.fetchCollectionsRestaurants(in: 281))
+                    self.dependencies.api.fetchCollectionsRestaurants(in: 281))
                 .trackActivity(activityIndicator)
-            }
+                .trackError(errorTracker)
+        }
         
-         let mappedResult = results.map { item in
+        let errors = errorTracker.asDriver()
+        
+        let mappedResult = results.map { item in
                 return HomeItemViewModel(categories: item.0, collectionsRestaurants: item.1)
             }
             .asDriver(onErrorJustReturn: nil)
@@ -64,7 +71,13 @@ final class MainViewModel: ViewModelType {
             .map { _ in () }
             .asDriver(onErrorJustReturn: ())
         
-        return Output(loading: loading, results: mappedResult, selected: selected)
+        let locationTap = input.locationTrigger
+            .do(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.dependencies.navigator.navigateToMapScreen()
+            })
+        
+        return Output(loading: loading, results: mappedResult, selected: selected, locationTaps: locationTap, error: errors)
     }
 }
 

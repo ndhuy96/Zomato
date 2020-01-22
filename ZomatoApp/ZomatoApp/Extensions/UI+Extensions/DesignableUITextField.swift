@@ -40,8 +40,8 @@ class DesignableUITextField: UITextField {
             imageView.tintColor = color
             leftView = imageView
         } else {
-            leftViewMode = UITextField.ViewMode.never
-            leftView = nil
+            leftViewMode = UITextField.ViewMode.always
+            leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         }
         
         // Placeholder text color

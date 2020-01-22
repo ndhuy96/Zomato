@@ -21,8 +21,8 @@ struct APIService {
         alamofireManager.adapter = CustomRequestAdapter()
     }
     
-    func request<T: Decodable>(input: BaseRequest, completion: @escaping (_ value: T?, _ error: BaseError?) -> Void) {
-        alamofireManager.request(input.url,
+    func request<T: Decodable>(input: BaseRequest, completion: @escaping (_ value: T?, _ error: BaseError?) -> Void) -> DataRequest {
+         return alamofireManager.request(input.url,
                                  method: input.requestType,
                                  parameters: input.parameters,
                                  encoding: input.encoding)

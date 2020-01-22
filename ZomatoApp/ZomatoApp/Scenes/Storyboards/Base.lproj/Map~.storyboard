@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ZomatoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rz-43-riV">
+                                <rect key="frame" x="64" y="421" width="286" height="64"/>
+                                <color key="backgroundColor" red="0.38059576299999998" green="0.640325441" blue="0.90969508889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Ul0-dC-4Rp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDU-fs-KCc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Rz-43-riV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FIB-cd-1vp"/>
+                            <constraint firstItem="5Rz-43-riV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I6Q-F7-k1r"/>
+                            <constraint firstItem="5Rz-43-riV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="vkZ-hY-r0N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="135"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Sob-qr-CT4">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="iku-o2-oNe" customClass="MainViewController" customModule="ZomatoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IKl-Mk-gvi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tu-jV-RsU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbl-dg-jF5" customClass="HomeView" customModule="ZomatoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="1000" id="uFA-a7-NlD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kbl-dg-jF5" firstAttribute="leading" secondItem="8tu-jV-RsU" secondAttribute="leading" id="FVL-gu-dZ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="kbl-dg-jF5" secondAttribute="bottom" id="asx-2J-KoT"/>
+                                    <constraint firstAttribute="trailing" secondItem="kbl-dg-jF5" secondAttribute="trailing" id="e5p-mM-wwC"/>
+                                    <constraint firstItem="kbl-dg-jF5" firstAttribute="top" secondItem="8tu-jV-RsU" secondAttribute="top" id="hg9-Z6-45F"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VZD-j8-stw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uFG-Yp-dbN"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8tu-jV-RsU" secondAttribute="bottom" id="6iE-RJ-caU"/>
+                            <constraint firstItem="kbl-dg-jF5" firstAttribute="width" secondItem="tBb-TQ-nQo" secondAttribute="width" id="IhM-Bl-D2Z"/>
+                            <constraint firstItem="tBb-TQ-nQo" firstAttribute="trailing" secondItem="8tu-jV-RsU" secondAttribute="trailing" id="QC2-GR-iGo"/>
+                            <constraint firstItem="kbl-dg-jF5" firstAttribute="height" secondItem="uFG-Yp-dbN" secondAttribute="height" id="ZuH-aO-Rb2"/>
+                            <constraint firstItem="8tu-jV-RsU" firstAttribute="leading" secondItem="tBb-TQ-nQo" secondAttribute="leading" id="eCC-kT-1AW"/>
+                            <constraint firstItem="8tu-jV-RsU" firstAttribute="top" secondItem="IKl-Mk-gvi" secondAttribute="top" id="v9D-VD-3un"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tBb-TQ-nQo"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="homeView" destination="kbl-dg-jF5" id="oGN-xp-pbY"/>
+                        <outlet property="scrollView" destination="8tu-jV-RsU" id="jjq-8X-fIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUV-h5-lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="135"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ycH-Zb-XzP">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="PrZ-sH-1Z9" customClass="MapViewController" customModule="ZomatoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V3L-kx-ClK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thb-IT-xoR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for burgers, delivery, barbers..." textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-Hp-7eG" customClass="DesignableUITextField" customModule="ZomatoApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="PUu-sq-AuS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic-search"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-at-3Ky">
+                                <rect key="frame" x="16" y="45" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="48q-M8-q5F"/>
+                                    <constraint firstAttribute="width" secondItem="TYd-at-3Ky" secondAttribute="height" multiplier="1:1" id="4WS-LT-KAR"/>
+                                </constraints>
+                                <state key="normal" image="ic-back-button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="thb-IT-xoR" firstAttribute="top" secondItem="V3L-kx-ClK" secondAttribute="top" id="26d-i3-V1F"/>
+                            <constraint firstItem="xk0-Hp-7eG" firstAttribute="leading" secondItem="gIo-tq-lgs" secondAttribute="leading" constant="16" id="Bo5-u4-5ky"/>
+                            <constraint firstItem="thb-IT-xoR" firstAttribute="leading" secondItem="gIo-tq-lgs" secondAttribute="leading" id="CJ9-jD-sx2"/>
+                            <constraint firstItem="gIo-tq-lgs" firstAttribute="trailing" secondItem="thb-IT-xoR" secondAttribute="trailing" id="IX2-KV-783"/>
+                            <constraint firstItem="gIo-tq-lgs" firstAttribute="trailing" secondItem="xk0-Hp-7eG" secondAttribute="trailing" constant="16" id="JNi-bK-011"/>
+                            <constraint firstItem="TYd-at-3Ky" firstAttribute="centerY" secondItem="xk0-Hp-7eG" secondAttribute="centerY" id="MyQ-PH-Usc"/>
+                            <constraint firstItem="xk0-Hp-7eG" firstAttribute="top" secondItem="V3L-kx-ClK" secondAttribute="top" constant="44" id="hXv-8Z-qu9"/>
+                            <constraint firstAttribute="bottom" secondItem="thb-IT-xoR" secondAttribute="bottom" id="k9R-Lr-gdP"/>
+                            <constraint firstItem="TYd-at-3Ky" firstAttribute="leading" secondItem="gIo-tq-lgs" secondAttribute="leading" constant="16" id="zhQ-Pq-6hv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gIo-tq-lgs"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="TYd-at-3Ky" id="qnw-nM-zSw"/>
+                        <outlet property="searchBar" destination="xk0-Hp-7eG" id="S9e-7P-b8o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-B3-aWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-back-button" width="24" height="24"/>
+        <image name="ic-search" width="24" height="24"/>
+    </resources>
+</document>

@@ -14,7 +14,7 @@ final class CustomRequestAdapter: RequestAdapter {
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
-        urlRequest.setValue(APIKey.apikey, forHTTPHeaderField: "user-key")
+        urlRequest.setValue(APIKey.apiKey, forHTTPHeaderField: "user-key")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         return urlRequest
     }

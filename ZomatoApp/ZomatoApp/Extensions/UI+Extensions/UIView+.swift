@@ -38,9 +38,36 @@ extension UIView {
     
     func dropShadow() {
         self.layer.masksToBounds = false
-        self.layer.shadowRadius = 2
-        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 2.0
+        self.layer.shadowOpacity = 1.0
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
+    }
+    
+    func clearShadow() {
+        self.layer.shadowColor = UIColor.clear.cgColor
+        self.layer.shadowOpacity = 0.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius = 0.0
+    }
+    
+    // Create snapshot view
+    func snapshotImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, UIScreen.main.scale)
+        let context = UIGraphicsGetCurrentContext()
+        if let context = context {
+            layer.render(in: context)
+        }
+        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return snapshot
+    }
+        
+    func snapshotView() -> UIView? {
+        if let snapshotImage = snapshotImage() {
+            return UIImageView(image: snapshotImage)
+        } else {
+            return nil
+        }
     }
 }
