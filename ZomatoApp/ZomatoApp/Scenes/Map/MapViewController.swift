@@ -22,6 +22,27 @@ final class MapViewController: UIViewController {
     var viewModel: MapViewModel!
     private let disposeBag = DisposeBag()
     
+    // CardView variables
+    // Current visible state of the card
+    var cardVisible = false
+    
+    // Variable determines the next state of the card expressing that the card starts and collapsed
+    var nextState: CardState {
+        return cardVisible ? .collapsed : .expanded
+    }
+
+    // Starting and end card heights will be determined later
+    var startCardHeight: CGFloat = 0
+    var endCardHeight: CGFloat = 0
+    
+    // Empty property animator array
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted: CGFloat = 0
+    
+    // CardViewController
+    let restaurantsVC = RestaurantsViewController(nibName: "RestaurantsViewController", bundle: nil)
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createMap()
@@ -39,13 +60,18 @@ final class MapViewController: UIViewController {
         marker.title = "Your position"
         marker.snippet = "Hanoi"
         marker.map = mapView
+        
+        // Hide CardView by swipping map
+        mapView.settings.consumesGesturesInView = true
+        
+        for gestureRecognizer in mapView.gestureRecognizers! {
+            gestureRecognizer.addTarget(self, action: #selector(dismissCardView(_:)))
+        }
     }
     
     private func config() {
-//        searchBarTextField.delegate = self
         searchBarTextField.leftImage = nil
-//        mapView.isHidden = true
-        hideKeyboardWhenTappedAround()
+        setupCardView()
     }
     
     private func bindViewModel() {
@@ -71,38 +97,6 @@ extension MapViewController: CustomTransitionDestination {
         return [searchBarTextField, backButton]
     }
 }
-
-//extension MapViewController: UITextFieldDelegate {
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if textField == searchBarTextField {
-//            UIView.transition(with: backButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
-//                self.backButton.center.y += 4
-//                self.backButton.alpha = 0.0
-//            }, completion: { finished in
-//                if finished {
-//                    self.backButton.setImage(UIImage(named: "ic-search"), for: UIControl.State.normal)
-//                    self.backButton.alpha = 1.0
-//                    self.backButton.isUserInteractionEnabled = false
-//                }
-//            })
-//        }
-//    }
-//
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        if textField == searchBarTextField {
-//            UIView.transition(with: backButton, duration: 0.2, options: .transitionCrossDissolve, animations: {
-//                self.backButton.center.y -= 4
-//                self.backButton.alpha = 0.0
-//            }, completion: { finished in
-//                if finished {
-//                    self.backButton.setImage(UIImage(named: "ic-back-button"), for: UIControl.State.normal)
-//                    self.backButton.alpha = 1.0
-//                    self.backButton.isUserInteractionEnabled = true
-//                }
-//            })
-//        }
-//    }
-//}
 
 extension MapViewController: StoryboardSceneBased {
     static var sceneStoryboard = UIStoryboard.map

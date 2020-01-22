@@ -63,6 +63,9 @@
 		8EB4E54523B332A40077EE79 /* TransitionAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E54423B332A40077EE79 /* TransitionAnimationController.swift */; };
 		8EC0C843238F7FAF00534A0B /* UITabBarController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C842238F7FAF00534A0B /* UITabBarController+.swift */; };
 		8EC0C845238FA57300534A0B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C844238FA57300534A0B /* CustomNavigationController.swift */; };
+		8EE19E3D23BF25A800ED4A85 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE19E3B23BF25A800ED4A85 /* RestaurantsViewController.swift */; };
+		8EE19E3E23BF25A800ED4A85 /* RestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE19E3C23BF25A800ED4A85 /* RestaurantsViewController.xib */; };
+		8EE19E4023BF2D8500ED4A85 /* MapViewController+SetupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE19E3F23BF2D8500ED4A85 /* MapViewController+SetupCardView.swift */; };
 		8EEC70682342112500D5BE73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC70662342112500D5BE73 /* MapViewController.swift */; };
 		8EEC706D234213F700D5BE73 /* GoogleMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC706C234213F700D5BE73 /* GoogleMapService.swift */; };
 		8EEC706F23421D1500D5BE73 /* MapViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */; };
@@ -134,6 +137,9 @@
 		8EB4E54423B332A40077EE79 /* TransitionAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimationController.swift; sourceTree = "<group>"; };
 		8EC0C842238F7FAF00534A0B /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
 		8EC0C844238FA57300534A0B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		8EE19E3B23BF25A800ED4A85 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		8EE19E3C23BF25A800ED4A85 /* RestaurantsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantsViewController.xib; sourceTree = "<group>"; };
+		8EE19E3F23BF2D8500ED4A85 /* MapViewController+SetupCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+SetupCardView.swift"; sourceTree = "<group>"; };
 		8EEC70662342112500D5BE73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8EEC706C234213F700D5BE73 /* GoogleMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapService.swift; sourceTree = "<group>"; };
 		8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewNavigator.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 				8E4C7CD4231909790015717B /* Login */,
 				8E4C7CD3231909670015717B /* Main */,
 				8EEC706A2342112900D5BE73 /* Map */,
+				8EE19E3A23BF255B00ED4A85 /* Restaurants */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -396,12 +403,22 @@
 			path = TransitionAnimation;
 			sourceTree = "<group>";
 		};
+		8EE19E3A23BF255B00ED4A85 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				8EE19E3B23BF25A800ED4A85 /* RestaurantsViewController.swift */,
+				8EE19E3C23BF25A800ED4A85 /* RestaurantsViewController.xib */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
 		8EEC706A2342112900D5BE73 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				8EEC70662342112500D5BE73 /* MapViewController.swift */,
 				8EEC706E23421D1500D5BE73 /* MapViewNavigator.swift */,
 				8E46CC66234364EE005CAAA1 /* MapViewModel.swift */,
+				8EE19E3F23BF2D8500ED4A85 /* MapViewController+SetupCardView.swift */,
 				8E46CC6823436508005CAAA1 /* Views */,
 			);
 			path = Map;
@@ -507,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB006D52320EE33009D7365 /* CollectionRestaurantsCell.xib in Resources */,
+				8EE19E3E23BF25A800ED4A85 /* RestaurantsViewController.xib in Resources */,
 				8EB1395223445261006D7513 /* Map.storyboard in Resources */,
 				8E4C7CC7231906170015717B /* LaunchScreen.storyboard in Resources */,
 				8EB006C7231F706E009D7365 /* CategoryViewCell.xib in Resources */,
@@ -603,6 +621,7 @@
 				8EB006AB231F584F009D7365 /* FetchCategoriesRequest.swift in Sources */,
 				8E4C7CD923190A930015717B /* UIStoryboard+ViewControllers.swift in Sources */,
 				8EB006A3231F57A9009D7365 /* BaseResult.swift in Sources */,
+				8EE19E3D23BF25A800ED4A85 /* RestaurantsViewController.swift in Sources */,
 				8E4C7CD02319081A0015717B /* App.swift in Sources */,
 				8E46CC67234364EE005CAAA1 /* MapViewModel.swift in Sources */,
 				8EB006AD231F58D1009D7365 /* APIUrls.swift in Sources */,
@@ -616,6 +635,7 @@
 				8EFDA7FB234725F50065A9D5 /* ErrorTracker.swift in Sources */,
 				8EB006B7231F5D05009D7365 /* MainViewModel.swift in Sources */,
 				8EB13960234592E6006D7513 /* Popularity.swift in Sources */,
+				8EE19E4023BF2D8500ED4A85 /* MapViewController+SetupCardView.swift in Sources */,
 				8EC0C845238FA57300534A0B /* CustomNavigationController.swift in Sources */,
 				8EB006A9231F5820009D7365 /* BaseRequest.swift in Sources */,
 				8E4C7CBD231906160015717B /* AppDelegate.swift in Sources */,
